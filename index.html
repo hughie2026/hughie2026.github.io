@@ -15,7 +15,7 @@
 
     body {
       margin: 0;
-      font-family: "Segoe UI", Arial, sans-serif;
+      font-family: "Segoe UI", "PingFang TC", "Microsoft JhengHei", Arial, sans-serif;
       line-height: 1.75;
       color: #1f2937;
       background: #f6f8fc;
@@ -34,7 +34,7 @@
       position: sticky;
       top: 0;
       z-index: 100;
-      background: rgba(255, 255, 255, 0.95);
+      background: rgba(255, 255, 255, 0.96);
       backdrop-filter: blur(10px);
       border-bottom: 1px solid #e5e7eb;
     }
@@ -100,7 +100,7 @@
 
     .hero-left h1 {
       margin: 0 0 12px;
-      font-size: 48px;
+      font-size: 46px;
       line-height: 1.12;
       color: #0f172a;
     }
@@ -135,7 +135,8 @@
 
     .button-primary,
     .button-secondary,
-    .sidebar-button {
+    .sidebar-button,
+    .note-button {
       display: inline-block;
       padding: 12px 18px;
       border-radius: 12px;
@@ -156,14 +157,16 @@
     }
 
     .button-secondary,
-    .sidebar-button {
+    .sidebar-button,
+    .note-button {
       background: white;
       color: #1f4db8;
       border: 1px solid #cdd9f5;
     }
 
     .button-secondary:hover,
-    .sidebar-button:hover {
+    .sidebar-button:hover,
+    .note-button:hover {
       background: #f8fbff;
       text-decoration: none;
     }
@@ -266,6 +269,19 @@
       padding-left: 22px;
     }
 
+    .bilingual-block {
+      display: grid;
+      gap: 10px;
+    }
+
+    .lang-en {
+      color: #1f2937;
+    }
+
+    .lang-zh {
+      color: #475569;
+    }
+
     .highlights {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -286,7 +302,7 @@
     }
 
     .highlight-card p {
-      margin: 0;
+      margin: 0 0 10px;
       font-size: 15px;
       color: #475569;
     }
@@ -313,6 +329,31 @@
       background: #f3f7ff;
       border: 1px solid #dce6fb;
       border-radius: 16px;
+    }
+
+    .notes-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .note-card {
+      background: #f9fbff;
+      border: 1px solid #e6eefc;
+      border-radius: 18px;
+      padding: 20px;
+    }
+
+    .note-card h3 {
+      margin: 0 0 10px;
+      font-size: 18px;
+      color: #163a7a;
+    }
+
+    .note-card p {
+      margin: 0 0 16px;
+      color: #475569;
+      font-size: 15px;
     }
 
     .contact-grid {
@@ -351,10 +392,8 @@
         max-width: 380px;
       }
 
-      .highlights {
-        grid-template-columns: 1fr;
-      }
-
+      .highlights,
+      .notes-grid,
       .contact-grid {
         grid-template-columns: 1fr;
       }
@@ -404,6 +443,7 @@
         <a href="#experience">Experience</a>
         <a href="#teaching">Teaching</a>
         <a href="#publications">Publications</a>
+        <a href="#notes">Teaching Notes</a>
         <a href="#software">Software</a>
         <a href="#grants">Grants</a>
         <a href="#awards">Awards</a>
@@ -414,26 +454,31 @@
 
   <section class="hero">
     <div class="hero-left">
-      <div class="eyebrow">Academic Homepage</div>
+      <div class="eyebrow">Academic Homepage ｜ 學術主頁</div>
       <h1>Hughie Tao Xiaoyu, DrPH, MPH, CPH</h1>
-      <p class="title">Associate Professor · University of Tourism, Macao</p>
+      <p class="title">Associate Professor · University of Tourism, Macao ｜ 副教授 · 澳門旅遊大學</p>
 
-      <p class="hero-summary">
-        I work on global health, social factors, health systems and governance,
-        decision science, data analytics, causal inference, medical tourism,
-        travel epidemiology, and travel medicine.
-      </p>
+      <div class="bilingual-block hero-summary">
+        <div class="lang-en">
+          I work on global health, social factors, health systems and governance,
+          decision science, data analytics, causal inference, medical tourism,
+          travel epidemiology, and travel medicine.
+        </div>
+        <div class="lang-zh">
+          我的研究聚焦於全球健康、社會因素、衛生體系與治理、決策科學、數據分析、因果推論、醫療旅遊、旅遊流行病學與旅遊醫學。
+        </div>
+      </div>
 
       <div class="meta">
         <div><strong>Email:</strong> <a href="mailto:hughietao@utm.edu.mo">hughietao@utm.edu.mo</a></div>
         <div><strong>Tel:</strong> +853 8598-1356</div>
-        <div><strong>Institution:</strong> University of Tourism, Macao</div>
+        <div><strong>Institution / 任職機構:</strong> University of Tourism, Macao ｜ 澳門旅遊大學</div>
       </div>
 
       <div class="hero-actions">
         <a class="button-primary" href="https://scholars.utm.edu.mo/profile/hughietao" target="_blank">Official Academic Profile</a>
-        <a class="button-secondary" href="#publications">View Publications</a>
-        <a class="button-secondary" href="mailto:hughietao@utm.edu.mo">Email Me</a>
+        <a class="button-secondary" href="#publications">Publications</a>
+        <a class="button-secondary" href="#notes">Teaching Notes</a>
       </div>
     </div>
 
@@ -442,8 +487,8 @@
         <img src="Hughie.jpg" alt="Profile Photo" />
 
         <h2 class="profile-name">Hughie Tao Xiaoyu</h2>
-        <p class="profile-role">Associate Professor</p>
-        <p class="profile-org">University of Tourism, Macao</p>
+        <p class="profile-role">Associate Professor ｜ 副教授</p>
+        <p class="profile-org">University of Tourism, Macao ｜ 澳門旅遊大學</p>
 
         <div class="profile-info">
           <div class="profile-info-item">
@@ -462,7 +507,7 @@
 
         <div class="profile-buttons">
           <a class="sidebar-button" href="https://scholars.utm.edu.mo/profile/hughietao" target="_blank">Official Profile</a>
-          <a class="sidebar-button" href="#contact">Contact Details</a>
+          <a class="sidebar-button" href="#notes">Teaching Notes</a>
         </div>
       </aside>
     </div>
@@ -470,149 +515,215 @@
 
   <main class="container">
     <section id="about" class="section">
-      <h2>About</h2>
-      <p>
-        I am an Associate Professor at the University of Tourism, Macao. My academic work
-        focuses on global health, social determinants, health systems and governance,
-        AI-oriented decision science, data analytics, causal inference, and travel-related
-        health research. This website presents my academic background, research interests,
-        teaching, software outputs, and scholarly activities.
-      </p>
+      <h2>About ｜ 關於我</h2>
+      <div class="bilingual-block">
+        <p class="lang-en">
+          I am an Associate Professor at the University of Tourism, Macao. My academic work
+          focuses on global health, social determinants, health systems and governance,
+          AI-oriented decision science, data analytics, causal inference, and travel-related
+          health research. This website presents my academic background, research interests,
+          teaching, software outputs, and scholarly activities.
+        </p>
+        <p class="lang-zh">
+          我現任澳門旅遊大學副教授。我的學術工作主要聚焦於全球健康、社會決定因素、衛生體系與治理、人工智能導向的決策科學、數據分析、因果推論，以及與旅遊相關的健康研究。本網站展示我的學術背景、研究興趣、教學工作、軟件成果及其他學術活動。
+        </p>
+      </div>
     </section>
 
     <section id="research" class="section">
-      <h2>Research Interests</h2>
+      <h2>Research Interests ｜ 研究方向</h2>
       <ul>
-        <li>Global Health: Social Factors, Health Systems, and Governance</li>
-        <li>Decision Science, Data Analytics, and Causal Inference (AI-Oriented)</li>
-        <li>Medical Tourism, Travel Epidemiology, and Travel Medicine</li>
+        <li>Global Health: Social Factors, Health Systems, and Governance ｜ 全球健康：社會因素、衛生體系與治理</li>
+        <li>Decision Science, Data Analytics, and Causal Inference (AI-Oriented) ｜ 決策科學、數據分析與因果推論（人工智能導向）</li>
+        <li>Medical Tourism, Travel Epidemiology, and Travel Medicine ｜ 醫療旅遊、旅遊流行病學與旅遊醫學</li>
       </ul>
     </section>
 
     <section id="highlights" class="section">
-      <h2>Research Highlights</h2>
+      <h2>Research Highlights ｜ 研究亮點</h2>
       <div class="highlights">
         <div class="highlight-card">
           <h3>Global Health and Governance</h3>
-          <p>
+          <p class="lang-en">
             Studying how social factors, institutions, and governance frameworks shape
             health outcomes and public health practice.
+          </p>
+          <p class="lang-zh">
+            研究社會因素、制度安排與治理框架如何影響健康結果及公共衛生實踐。
           </p>
         </div>
         <div class="highlight-card">
           <h3>AI-Oriented Decision Science</h3>
-          <p>
+          <p class="lang-en">
             Applying data analytics and causal inference to support evidence-based
             decision-making in health and tourism-related contexts.
+          </p>
+          <p class="lang-zh">
+            運用數據分析與因果推論，支援健康及旅遊相關情境中的循證決策。
           </p>
         </div>
         <div class="highlight-card">
           <h3>Travel Medicine and Medical Tourism</h3>
-          <p>
+          <p class="lang-en">
             Exploring health risks, behavioral patterns, and decision support approaches
             in travel epidemiology, travel medicine, and medical tourism.
+          </p>
+          <p class="lang-zh">
+            探索旅遊流行病學、旅遊醫學與醫療旅遊中的健康風險、行為模式及決策支援方法。
           </p>
         </div>
       </div>
     </section>
 
     <section id="education" class="section">
-      <h2>Education</h2>
+      <h2>Education ｜ 教育背景</h2>
       <ul>
-        <li>Doctor of Public Health (DrPH), Epidemiology and Biostatistics, Macau University of Science and Technology</li>
-        <li>Master of Public Health (MPH), Macau University of Science and Technology</li>
-        <li>MSc (Online), Big Data and Business Analytics, University of Barcelona</li>
-        <li>BSc, Public (Health) Administration, Jilin Medical University</li>
-        <li>BSc (Second Degree), Applied Psychology, Jilin Medical University</li>
+        <li>Doctor of Public Health (DrPH), Epidemiology and Biostatistics, Macau University of Science and Technology ｜ 公共衛生博士（流行病學與生物統計學），澳門科技大學</li>
+        <li>Master of Public Health (MPH), Macau University of Science and Technology ｜ 公共衛生碩士，澳門科技大學</li>
+        <li>MSc (Online), Big Data and Business Analytics, University of Barcelona ｜ 大數據與商業分析理學碩士（線上），巴塞隆拿大學</li>
+        <li>BSc, Public (Health) Administration, Jilin Medical University ｜ 公共（衛生）事業管理學士，吉林醫藥學院</li>
+        <li>BSc (Second Degree), Applied Psychology, Jilin Medical University ｜ 應用心理學學士（第二學位），吉林醫藥學院</li>
       </ul>
     </section>
 
     <section id="experience" class="section">
-      <h2>Professional Experience</h2>
+      <h2>Professional Experience ｜ 專業經歷</h2>
 
       <div class="timeline-item">
         <span class="timeline-year">2025–Present</span>
-        Associate Professor, University of Tourism, Macao
+        Associate Professor, University of Tourism, Macao ｜ 澳門旅遊大學副教授
       </div>
 
       <div class="timeline-item">
         <span class="timeline-year">2025</span>
-        Executive Director, Hong Kong Public Health Technology Research Center
+        Executive Director, Hong Kong Public Health Technology Research Center ｜ 香港公共衛生科技研究中心執行主任
       </div>
 
       <div class="timeline-item">
         <span class="timeline-year">2025</span>
-        Discipline Leader and Associate Professor, Guangzhou College of Commerce
+        Discipline Leader and Associate Professor, Guangzhou College of Commerce ｜ 廣州商學院學科帶頭人、副教授
       </div>
 
       <div class="timeline-item">
         <span class="timeline-year">2024–2025</span>
-        Postdoctoral Research Fellow, School of Medicine, Macau University of Science and Technology
+        Postdoctoral Research Fellow, School of Medicine, Macau University of Science and Technology ｜ 澳門科技大學醫學院博士後研究員
       </div>
     </section>
 
     <section id="teaching" class="section">
-      <h2>Teaching</h2>
-      <p>
-        Courses taught include Applied Statistics, Health Management, Business Analytics,
-        Nutrition, and Epidemiology.
-      </p>
-      <p>
-        Over the past three years, I undertook more than 500 teaching hours per academic
-        year for undergraduate core courses. I also delivered postgraduate-level courses
-        in Health Big Data and Medical Research Methodology.
-      </p>
-      <p>
-        I have supervised 35 undergraduate theses, co-supervised 4 master’s theses,
-        and 1 doctoral dissertation.
-      </p>
+      <h2>Teaching ｜ 教學</h2>
+      <div class="bilingual-block">
+        <p class="lang-en">
+          Courses taught include Applied Statistics, Health Management, Business Analytics,
+          Nutrition, and Epidemiology.
+        </p>
+        <p class="lang-zh">
+          主講課程包括應用統計學、健康管理、商業分析、營養學及流行病學。
+        </p>
+
+        <p class="lang-en">
+          Over the past three years, I undertook more than 500 teaching hours per academic
+          year for undergraduate core courses. I also delivered postgraduate-level courses
+          in Health Big Data and Medical Research Methodology.
+        </p>
+        <p class="lang-zh">
+          過去三年中，我每學年承擔超過 500 小時本科核心課程教學，同時亦講授健康大數據與醫學研究方法等研究生課程。
+        </p>
+
+        <p class="lang-en">
+          I have supervised 35 undergraduate theses, co-supervised 4 master’s theses,
+          and 1 doctoral dissertation.
+        </p>
+        <p class="lang-zh">
+          我已指導 35 篇本科畢業論文，聯合指導 4 篇碩士學位論文及 1 篇博士學位論文。
+        </p>
+      </div>
     </section>
 
     <section id="publications" class="section">
-      <h2>Publications</h2>
+      <h2>Publications ｜ 學術出版</h2>
       <div class="profile-link-box">
-        <strong>Official academic profile</strong><br />
+        <strong>Official academic profile ｜ 官方學術檔案</strong><br />
         <a href="https://scholars.utm.edu.mo/profile/hughietao" target="_blank">
           scholars.utm.edu.mo/profile/hughietao
         </a>
       </div>
     </section>
 
+    <section id="notes" class="section">
+      <h2>Teaching Notes ｜ 教學筆記</h2>
+      <div class="notes-grid">
+        <div class="note-card">
+          <h3>Business Analytics ｜ 商業分析課程筆記</h3>
+          <p>
+            Course notes and learning materials for Business Analytics.
+            <br />
+            商業分析課程相關筆記與學習資料。
+          </p>
+          <a class="note-button" href="https://www.notion.so/335708b9c1f88058826ddff9c02e467b?source=copy_link" target="_blank">Open Notes</a>
+        </div>
+
+        <div class="note-card">
+          <h3>Advanced Topics in Health Management ｜ 高級健康管理專題</h3>
+          <p>
+            Selected notes and topic-based resources for advanced health management.
+            <br />
+            高級健康管理專題相關筆記與主題資源。
+          </p>
+          <a class="note-button" href="https://www.notion.so/336708b9c1f880298faed3125b872402?source=copy_link" target="_blank">Open Notes</a>
+        </div>
+
+        <div class="note-card">
+          <h3>Applied Statistics Based on Vibe Coding ｜ 基於 Vibe Coding 的應用統計</h3>
+          <p>
+            Notes and examples on applied statistics with a vibe coding approach.
+            <br />
+            基於 Vibe Coding 方法的應用統計筆記與示例。
+          </p>
+          <a class="note-button" href="https://www.notion.so/Vibe-Coding-335708b9c1f880bc901edf2895cde80d?source=copy_link" target="_blank">Open Notes</a>
+        </div>
+      </div>
+    </section>
+
     <section id="software" class="section">
-      <h2>Patents / Software Copyright</h2>
+      <h2>Patents / Software Copyright ｜ 專利／軟件著作權</h2>
       <ul>
         <li>
           <strong>Exercise and Nutrition Integrated Health Management System (UTM) V1.0</strong><br />
           Software Copyright No.: 2025SR1988601<br />
           Inventor: Xiaoyu Tao
+          <br />
+          運動與營養整合健康管理系統（UTM）V1.0，軟件著作權號：2025SR1988601，發明人：陶曉宇
         </li>
         <li>
-          <strong>Personalized travel health information analysis and decision support system software (UTM) V1.0</strong><br />
+          <strong>Personalized Travel Health Information Analysis and Decision Support System Software (UTM) V1.0</strong><br />
           Software Copyright No.: 2026SR0500804<br />
           Inventor: Xiaoyu Tao
+          <br />
+          個性化旅遊健康信息分析與決策支援系統軟件（UTM）V1.0，軟件著作權號：2026SR0500804，發明人：陶曉宇
         </li>
       </ul>
     </section>
 
     <section id="grants" class="section">
-      <h2>Research Grants</h2>
+      <h2>Research Grants ｜ 科研項目</h2>
       <ul>
-        <li>2023: Guangdong Provincial Private Education Special Fund Project, Co-PI, RMB 1,200,000</li>
-        <li>2022–2023: Ministry of Education Industry-University Cooperative Project, PI, RMB 50,000</li>
-        <li>2021–2022: Macao Higher Education Fund Project, CI, MOP 308,200</li>
+        <li>2023: Guangdong Provincial Private Education Special Fund Project, Co-PI, RMB 1,200,000 ｜ 2023年廣東省民辦教育專項資金項目，合作主持，人民幣120萬元</li>
+        <li>2022–2023: Ministry of Education Industry-University Cooperative Project, PI, RMB 50,000 ｜ 2022–2023年教育部產學合作協同育人項目，主持，人民幣5萬元</li>
+        <li>2021–2022: Macao Higher Education Fund Project, CI, MOP 308,200 ｜ 2021–2022年澳門高等教育基金項目，參與研究者，澳門元308,200</li>
       </ul>
     </section>
 
     <section id="awards" class="section">
-      <h2>Honors &amp; Awards</h2>
+      <h2>Honors &amp; Awards ｜ 榮譽與獎項</h2>
       <ul>
-        <li>Dr. Henry Fok Foundation Scholarship, Macao SAR (2021)</li>
-        <li>3rd Prize, Macao Postgraduate Innovation &amp; Entrepreneurship Competition (2018)</li>
+        <li>Dr. Henry Fok Foundation Scholarship, Macao SAR (2021) ｜ 澳門霍英東基金會獎學金（2021）</li>
+        <li>3rd Prize, Macao Postgraduate Innovation &amp; Entrepreneurship Competition (2018) ｜ 澳門研究生創新創業比賽三等獎（2018）</li>
       </ul>
     </section>
 
     <section id="contact" class="section">
-      <h2>Contact</h2>
+      <h2>Contact ｜ 聯絡方式</h2>
       <div class="contact-grid">
         <div class="contact-item">
           <strong>Email</strong>
@@ -624,11 +735,13 @@
         </div>
         <div class="contact-item">
           <strong>Mobile</strong>
-          +853 6885-7999 (Macao) / +86 191-6885-7999 (Mainland China)
+          +853 6885-7999
         </div>
         <div class="contact-item">
-          <strong>Address</strong>
+          <strong>Address ｜ 地址</strong>
           Avenida Padre Tomás Pereira Taipa, University of Tourism, Macao SAR, China
+          <br />
+          中國澳門特別行政區氹仔望廈山旅遊大學
         </div>
       </div>
     </section>

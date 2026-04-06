@@ -41,7 +41,7 @@
     }
 
     .hero-left {
-      flex: 1 1 520px;
+      flex: 1 1 560px;
       max-width: 760px;
     }
 
@@ -55,13 +55,29 @@
     .title {
       font-size: 20px;
       color: #4b5563;
-      margin-bottom: 20px;
+      margin: 0 0 20px;
       font-weight: bold;
     }
 
     .hero-left p {
       font-size: 18px;
-      margin-bottom: 16px;
+      margin: 0 0 16px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 24px;
+    }
+
+    .hero-actions a {
+      display: inline-block;
+      padding: 10px 18px;
+      border-radius: 10px;
+      background: white;
+      border: 1px solid #d6def5;
+      font-weight: 600;
     }
 
     .hero-right {
@@ -92,19 +108,21 @@
       color: #4b5563;
     }
 
-    .nav {
+    .section-nav {
       position: sticky;
       top: 0;
       z-index: 10;
-      background: rgba(255, 255, 255, 0.95);
-      border-bottom: 1px solid #e5e7eb;
-      padding: 14px 10%;
       display: flex;
       flex-wrap: wrap;
       gap: 18px;
+      padding: 14px 10%;
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(10px);
+      border-top: 1px solid #e5e7eb;
+      border-bottom: 1px solid #e5e7eb;
     }
 
-    .nav a {
+    .section-nav a {
       font-size: 14px;
       font-weight: 600;
       color: #374151;
@@ -139,40 +157,52 @@
       margin-bottom: 16px;
     }
 
-    .two-column {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 24px;
+    .timeline-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .profile-link-box {
+      margin-top: 16px;
+      padding: 16px 18px;
+      background: #f3f6ff;
+      border: 1px solid #dbe5ff;
+      border-radius: 14px;
     }
 
     @media (max-width: 900px) {
       .hero {
-        padding: 40px 6%;
+        padding: 44px 6%;
       }
 
-      .nav {
+      .section-nav {
         padding: 12px 6%;
-      }
-
-      .hero-left h1 {
-        font-size: 32px;
-      }
-
-      .hero-left p {
-        font-size: 16px;
       }
 
       .container {
         width: 92%;
       }
 
+      .hero-left h1 {
+        font-size: 34px;
+      }
+
+      .hero-left p {
+        font-size: 16px;
+      }
+    }
+
+    @media (max-width: 640px) {
       .hero-right {
         flex: 1 1 100%;
         max-width: 320px;
       }
 
-      .two-column {
-        grid-template-columns: 1fr;
+      .section {
+        padding: 24px;
+      }
+
+      .hero-left h1 {
+        font-size: 30px;
       }
     }
   </style>
@@ -183,17 +213,21 @@
       <h1>Hughie Tao Xiaoyu, DrPH, MPH, CPH</h1>
       <p class="title">Associate Professor · University of Tourism, Macao</p>
       <p>
-        I am an academic working in global health, decision science, data analytics,
-        causal inference, medical tourism, travel epidemiology, and travel medicine.
-        This website presents my background, research, teaching, publications, and academic activities.
+        I am an academic focusing on global health, social factors, health systems and
+        governance, decision science, data analytics, causal inference, medical tourism,
+        travel epidemiology, and travel medicine.
       </p>
       <p>
         Email:
         <a href="mailto:hughietao@utm.edu.mo">hughietao@utm.edu.mo</a>
       </p>
-      <p>
-        Tel: +853 8598-1356
-      </p>
+
+      <div class="hero-actions">
+        <a href="mailto:hughietao@utm.edu.mo">Email</a>
+        <a href="https://scholars.utm.edu.mo/profile/hughietao" target="_blank">Official Profile</a>
+        <a href="#publications">Publications</a>
+        <a href="#contact">Contact</a>
+      </div>
     </div>
 
     <div class="hero-right">
@@ -204,12 +238,12 @@
 
       <div class="card">
         <img src="qr.png" alt="QR Code" />
-        <p>Scan for publications / articles</p>
+        <p>Scan for full publications and academic profile</p>
       </div>
     </div>
   </header>
 
-  <nav class="nav">
+  <nav class="section-nav">
     <a href="#about">About</a>
     <a href="#research">Research</a>
     <a href="#certifications">Certifications</a>
@@ -217,25 +251,25 @@
     <a href="#experience">Experience</a>
     <a href="#teaching">Teaching</a>
     <a href="#publications">Publications</a>
-    <a href="#software">Software</a>
+    <a href="#patents">Software</a>
     <a href="#grants">Grants</a>
     <a href="#awards">Awards</a>
     <a href="#contact">Contact</a>
   </nav>
 
   <main class="container">
-    <section class="section" id="about">
+    <section id="about" class="section">
       <h2>About</h2>
       <p>
-        I am an Associate Professor at the University of Tourism, Macao. My research
-        focuses on global health, health systems and governance, AI-oriented decision science,
-        data analytics, causal inference, medical tourism, and travel medicine. I am also
-        actively engaged in interdisciplinary teaching and applied research in public health
-        and health data science.
+        I am an Associate Professor at the University of Tourism, Macao. My work focuses
+        on global health, social determinants, health systems and governance, AI-oriented
+        decision science, data analytics, causal inference, and travel-related health
+        research. This website presents my academic background, research interests,
+        teaching, and scholarly activities.
       </p>
     </section>
 
-    <section class="section" id="research">
+    <section id="research" class="section">
       <h2>Research Interests</h2>
       <ul>
         <li>Global Health: Social Factors, Health Systems, and Governance</li>
@@ -244,7 +278,7 @@
       </ul>
     </section>
 
-    <section class="section" id="certifications">
+    <section id="certifications" class="section">
       <h2>Professional Certifications</h2>
       <ul>
         <li>Certified Data Management Professional (CDMP-P)</li>
@@ -254,7 +288,7 @@
       </ul>
     </section>
 
-    <section class="section" id="education">
+    <section id="education" class="section">
       <h2>Education</h2>
       <ul>
         <li>Doctor of Public Health (DrPH), Epidemiology and Biostatistics, Macau University of Science and Technology</li>
@@ -265,7 +299,7 @@
       </ul>
     </section>
 
-    <section class="section" id="experience">
+    <section id="experience" class="section">
       <h2>Professional Experience</h2>
       <div class="timeline-item"><strong>2025–Present</strong>: Associate Professor, University of Tourism, Macao</div>
       <div class="timeline-item"><strong>2025</strong>: Executive Director, Hong Kong Public Health Technology Research Center</div>
@@ -273,8 +307,8 @@
       <div class="timeline-item"><strong>2024–2025</strong>: Postdoctoral Research Fellow, School of Medicine, Macau University of Science and Technology</div>
     </section>
 
-    <section class="section" id="teaching">
-      <h2>Teaching Experience</h2>
+    <section id="teaching" class="section">
+      <h2>Teaching</h2>
       <p>
         Courses taught include Applied Statistics, Health Management, Business Analytics,
         Nutrition, and Epidemiology.
@@ -284,8 +318,8 @@
         year for undergraduate core courses.
       </p>
       <p>
-        I have also delivered postgraduate-level courses in Health Big Data and Medical
-        Research Methodology.
+        I also delivered postgraduate-level courses in Health Big Data and Medical Research
+        Methodology.
       </p>
       <p>
         I have supervised 35 undergraduate theses, co-supervised 4 master’s theses,
@@ -293,14 +327,21 @@
       </p>
     </section>
 
-    <section class="section" id="publications">
+    <section id="publications" class="section">
       <h2>Publications</h2>
       <p>
-        A complete and up-to-date list of publications is available via the QR code above.
+        My most complete and up-to-date publication record is available on my official
+        academic profile page.
       </p>
+      <div class="profile-link-box">
+        <strong>Official academic profile:</strong><br />
+        <a href="https://scholars.utm.edu.mo/profile/hughietao" target="_blank">
+          scholars.utm.edu.mo/profile/hughietao
+        </a>
+      </div>
     </section>
 
-    <section class="section" id="software">
+    <section id="patents" class="section">
       <h2>Patents / Software Copyright</h2>
       <ul>
         <li>
@@ -316,16 +357,16 @@
       </ul>
     </section>
 
-    <section class="section" id="grants">
+    <section id="grants" class="section">
       <h2>Research Grants</h2>
       <ul>
-        <li>2023: Guangdong Provincial Private Education Special Fund Project — Co-PI | RMB 1,200,000</li>
-        <li>2022–2023: Ministry of Education Industry-University Cooperative Project — PI | RMB 50,000</li>
-        <li>2021–2022: Macao Higher Education Fund Project — CI | MOP 308,200</li>
+        <li>2023: Guangdong Provincial Private Education Special Fund Project, Co-PI, RMB 1,200,000</li>
+        <li>2022–2023: Ministry of Education Industry-University Cooperative Project, PI, RMB 50,000</li>
+        <li>2021–2022: Macao Higher Education Fund Project, CI, MOP 308,200</li>
       </ul>
     </section>
 
-    <section class="section" id="awards">
+    <section id="awards" class="section">
       <h2>Honors &amp; Awards</h2>
       <ul>
         <li>Dr. Henry Fok Foundation Scholarship, Macao SAR (2021)</li>
@@ -333,7 +374,7 @@
       </ul>
     </section>
 
-    <section class="section" id="contact">
+    <section id="contact" class="section">
       <h2>Contact</h2>
       <p><strong>Email:</strong> <a href="mailto:hughietao@utm.edu.mo">hughietao@utm.edu.mo</a></p>
       <p><strong>Tel:</strong> +853 8598-1356</p>

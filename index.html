@@ -177,27 +177,10 @@
     }
 
     .hero-summary {
-      margin-bottom: 22px;
+      margin-bottom: 26px;
       font-size: 18px;
       color: #334155;
       max-width: 840px;
-    }
-
-    .meta {
-      display: grid;
-      gap: 10px;
-      margin-bottom: 28px;
-      color: #374151;
-      font-size: 16px;
-    }
-
-    .meta div {
-      padding: 10px 14px;
-      background: rgba(255, 255, 255, 0.55);
-      border: 1px solid rgba(222, 232, 247, 0.95);
-      border-radius: 14px;
-      width: fit-content;
-      max-width: 100%;
     }
 
     .hero-actions {
@@ -207,7 +190,6 @@
     }
 
     .button-primary,
-    .button-secondary,
     .note-button {
       display: inline-block;
       padding: 12px 18px;
@@ -230,14 +212,12 @@
       transform: translateY(-1px);
     }
 
-    .button-secondary,
     .note-button {
       background: rgba(255, 255, 255, 0.9);
       color: var(--primary);
       border: 1px solid #cdd9f5;
     }
 
-    .button-secondary:hover,
     .note-button:hover {
       background: #f8fbff;
       text-decoration: none;
@@ -400,18 +380,16 @@
       padding: 20px;
       scroll-snap-align: start;
       box-shadow: 0 10px 20px rgba(31, 77, 184, 0.04);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 14px;
     }
 
     .note-card h3 {
-      margin: 0 0 10px;
+      margin: 0;
       font-size: 18px;
       color: #163a7a;
-    }
-
-    .note-card p {
-      margin: 0 0 16px;
-      color: #475569;
-      font-size: 15px;
     }
 
     .contact-grid {
@@ -488,8 +466,7 @@
         font-size: 18px;
       }
 
-      .hero-summary,
-      .meta {
+      .hero-summary {
         font-size: 16px;
       }
 
@@ -510,10 +487,6 @@
         min-width: 280px;
         max-width: 280px;
         flex-basis: 280px;
-      }
-
-      .meta div {
-        width: 100%;
       }
     }
   </style>
@@ -555,16 +528,8 @@
         Medical Tourism, Travel Epidemiology, and Travel Medicine.
       </div>
 
-      <div class="meta">
-        <div><strong>Email:</strong> <a href="mailto:hughietao@utm.edu.mo">hughietao@utm.edu.mo</a></div>
-        <div><strong>Tel:</strong> +853 8598-1356</div>
-        <div><strong>Institution:</strong> University of Tourism, Macao</div>
-      </div>
-
       <div class="hero-actions">
         <a class="button-primary" href="https://scholars.utm.edu.mo/profile/hughietao" target="_blank">Official Academic Profile</a>
-        <a class="button-secondary" href="#publications">Publications</a>
-        <a class="button-secondary" href="#notes">Teaching Notes</a>
       </div>
     </div>
 
@@ -689,19 +654,16 @@
       <div class="notes-scroll">
         <div class="note-card">
           <h3>Business Analytics</h3>
-          <p>Course notes and learning materials for Business Analytics.</p>
           <a class="note-button" href="https://www.notion.so/335708b9c1f88058826ddff9c02e467b?source=copy_link" target="_blank">Open Notes</a>
         </div>
 
         <div class="note-card">
           <h3>Advanced Topics in Health Management</h3>
-          <p>Selected notes and topic-based resources for advanced health management.</p>
           <a class="note-button" href="https://www.notion.so/336708b9c1f880298faed3125b872402?source=copy_link" target="_blank">Open Notes</a>
         </div>
 
         <div class="note-card">
           <h3>Applied Statistics Based on Vibe Coding</h3>
-          <p>Notes and examples on applied statistics with a vibe coding approach.</p>
           <a class="note-button" href="https://www.notion.so/Vibe-Coding-335708b9c1f880bc901edf2895cde80d?source=copy_link" target="_blank">Open Notes</a>
         </div>
       </div>

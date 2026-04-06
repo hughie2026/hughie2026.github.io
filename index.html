@@ -15,10 +15,10 @@
 
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      line-height: 1.7;
+      font-family: "Segoe UI", Arial, sans-serif;
+      line-height: 1.75;
       color: #1f2937;
-      background: #f7f8fc;
+      background: #f6f8fc;
     }
 
     a {
@@ -30,58 +30,141 @@
       text-decoration: underline;
     }
 
-    .hero {
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid #e5e7eb;
+    }
+
+    .topbar-inner {
+      width: min(1180px, 92%);
+      margin: 0 auto;
+      padding: 14px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .brand {
+      font-size: 18px;
+      font-weight: 700;
+      color: #111827;
+    }
+
+    .nav {
       display: flex;
       flex-wrap: wrap;
-      justify-content: space-between;
-      gap: 32px;
-      padding: 56px 10%;
-      background: linear-gradient(180deg, #eef3ff 0%, #f7f8fc 100%);
-      align-items: flex-start;
+      gap: 16px;
+    }
+
+    .nav a {
+      font-size: 14px;
+      font-weight: 600;
+      color: #4b5563;
+    }
+
+    .hero {
+      width: min(1180px, 92%);
+      margin: 0 auto;
+      padding: 56px 0 28px;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 290px;
+      gap: 34px;
+      align-items: start;
     }
 
     .hero-left {
-      flex: 1 1 560px;
-      max-width: 760px;
+      background: linear-gradient(135deg, #eef4ff 0%, #f8fbff 100%);
+      border: 1px solid #e2e8f0;
+      border-radius: 28px;
+      padding: 42px;
+      box-shadow: 0 18px 40px rgba(15, 23, 42, 0.06);
+    }
+
+    .eyebrow {
+      display: inline-block;
+      padding: 6px 12px;
+      border-radius: 999px;
+      background: #dfe9ff;
+      color: #274690;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.2px;
+      margin-bottom: 18px;
     }
 
     .hero-left h1 {
       margin: 0 0 12px;
-      font-size: 42px;
-      line-height: 1.15;
-      color: #111827;
+      font-size: 48px;
+      line-height: 1.12;
+      color: #0f172a;
     }
 
     .title {
-      font-size: 20px;
-      color: #4b5563;
-      margin: 0 0 20px;
-      font-weight: bold;
+      margin: 0 0 18px;
+      font-size: 21px;
+      font-weight: 700;
+      color: #475569;
     }
 
-    .hero-left p {
+    .hero-summary {
       font-size: 18px;
-      margin: 0 0 16px;
+      color: #334155;
+      max-width: 820px;
+      margin-bottom: 20px;
+    }
+
+    .meta {
+      display: grid;
+      gap: 8px;
+      margin-bottom: 26px;
+      color: #374151;
+      font-size: 16px;
     }
 
     .hero-actions {
       display: flex;
       flex-wrap: wrap;
       gap: 12px;
-      margin-top: 24px;
     }
 
-    .hero-actions a {
+    .button-primary,
+    .button-secondary {
       display: inline-block;
-      padding: 10px 18px;
-      border-radius: 10px;
+      padding: 12px 18px;
+      border-radius: 12px;
+      font-weight: 700;
+      transition: 0.2s ease;
+    }
+
+    .button-primary {
+      background: #1f4db8;
+      color: white;
+      border: 1px solid #1f4db8;
+    }
+
+    .button-primary:hover {
+      background: #173c90;
+      text-decoration: none;
+    }
+
+    .button-secondary {
       background: white;
-      border: 1px solid #d6def5;
-      font-weight: 600;
+      color: #1f4db8;
+      border: 1px solid #cdd9f5;
+    }
+
+    .button-secondary:hover {
+      background: #f8fbff;
+      text-decoration: none;
     }
 
     .hero-right {
-      flex: 0 0 260px;
       display: flex;
       flex-direction: column;
       gap: 20px;
@@ -89,63 +172,50 @@
 
     .card {
       background: white;
-      border-radius: 18px;
+      border-radius: 22px;
       padding: 16px;
-      box-shadow: 0 10px 30px rgba(31, 41, 55, 0.08);
+      box-shadow: 0 14px 34px rgba(15, 23, 42, 0.08);
+      border: 1px solid #edf2f7;
       text-align: center;
     }
 
     .card img {
       width: 100%;
       height: auto;
-      border-radius: 12px;
       display: block;
+      border-radius: 16px;
     }
 
     .card p {
-      margin: 12px 0 0;
+      margin: 12px 0 4px;
       font-size: 14px;
-      color: #4b5563;
-    }
-
-    .section-nav {
-      position: sticky;
-      top: 0;
-      z-index: 10;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 18px;
-      padding: 14px 10%;
-      background: rgba(255, 255, 255, 0.92);
-      backdrop-filter: blur(10px);
-      border-top: 1px solid #e5e7eb;
-      border-bottom: 1px solid #e5e7eb;
-    }
-
-    .section-nav a {
-      font-size: 14px;
-      font-weight: 600;
-      color: #374151;
+      color: #64748b;
     }
 
     .container {
-      width: min(1100px, 88%);
-      margin: 40px auto 80px;
+      width: min(1180px, 92%);
+      margin: 0 auto 80px;
     }
 
     .section {
       background: white;
-      border-radius: 20px;
-      padding: 32px;
+      border-radius: 24px;
+      padding: 34px;
       margin-bottom: 24px;
-      box-shadow: 0 8px 24px rgba(15, 23, 42, 0.05);
+      box-shadow: 0 10px 26px rgba(15, 23, 42, 0.05);
+      border: 1px solid #eef2f7;
     }
 
     .section h2 {
-      margin-top: 0;
-      margin-bottom: 18px;
-      font-size: 28px;
+      margin: 0 0 18px;
+      font-size: 30px;
+      line-height: 1.2;
       color: #111827;
+    }
+
+    .section p {
+      margin-top: 0;
+      color: #334155;
     }
 
     .section ul {
@@ -153,48 +223,108 @@
       padding-left: 22px;
     }
 
+    .highlights {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .highlight-card {
+      background: #f8fbff;
+      border: 1px solid #dbe7ff;
+      border-radius: 18px;
+      padding: 20px;
+    }
+
+    .highlight-card h3 {
+      margin: 0 0 10px;
+      font-size: 18px;
+      color: #163a7a;
+    }
+
+    .highlight-card p {
+      margin: 0;
+      font-size: 15px;
+      color: #475569;
+    }
+
     .timeline-item {
-      margin-bottom: 16px;
+      padding: 16px 0;
+      border-bottom: 1px solid #edf2f7;
     }
 
     .timeline-item:last-child {
-      margin-bottom: 0;
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    .timeline-year {
+      display: inline-block;
+      min-width: 130px;
+      font-weight: 800;
+      color: #1f4db8;
     }
 
     .profile-link-box {
       margin-top: 16px;
-      padding: 16px 18px;
-      background: #f3f6ff;
-      border: 1px solid #dbe5ff;
-      border-radius: 14px;
+      padding: 18px 20px;
+      background: #f3f7ff;
+      border: 1px solid #dce6fb;
+      border-radius: 16px;
     }
 
-    @media (max-width: 900px) {
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px 24px;
+    }
+
+    .contact-item {
+      background: #f9fbff;
+      border: 1px solid #edf2f7;
+      border-radius: 16px;
+      padding: 16px 18px;
+    }
+
+    .contact-item strong {
+      display: block;
+      margin-bottom: 6px;
+      color: #0f172a;
+    }
+
+    .footer {
+      width: min(1180px, 92%);
+      margin: 0 auto 36px;
+      color: #64748b;
+      font-size: 14px;
+      text-align: center;
+    }
+
+    @media (max-width: 980px) {
       .hero {
-        padding: 44px 6%;
+        grid-template-columns: 1fr;
       }
 
-      .section-nav {
-        padding: 12px 6%;
+      .hero-right {
+        max-width: 340px;
       }
 
-      .container {
-        width: 92%;
+      .highlights {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-grid {
+        grid-template-columns: 1fr;
       }
 
       .hero-left h1 {
-        font-size: 34px;
-      }
-
-      .hero-left p {
-        font-size: 16px;
+        font-size: 38px;
       }
     }
 
     @media (max-width: 640px) {
-      .hero-right {
-        flex: 1 1 100%;
-        max-width: 320px;
+      .hero-left {
+        padding: 28px;
       }
 
       .section {
@@ -202,31 +332,66 @@
       }
 
       .hero-left h1 {
-        font-size: 30px;
+        font-size: 31px;
+      }
+
+      .title {
+        font-size: 18px;
+      }
+
+      .hero-summary,
+      .meta {
+        font-size: 16px;
+      }
+
+      .topbar-inner {
+        padding: 12px 0;
       }
     }
   </style>
 </head>
 <body>
-  <header class="hero">
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="brand">Hughie Tao Xiaoyu</div>
+      <nav class="nav">
+        <a href="#about">About</a>
+        <a href="#research">Research</a>
+        <a href="#highlights">Highlights</a>
+        <a href="#education">Education</a>
+        <a href="#experience">Experience</a>
+        <a href="#teaching">Teaching</a>
+        <a href="#publications">Publications</a>
+        <a href="#software">Software</a>
+        <a href="#grants">Grants</a>
+        <a href="#awards">Awards</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
     <div class="hero-left">
+      <div class="eyebrow">Academic Homepage</div>
       <h1>Hughie Tao Xiaoyu, DrPH, MPH, CPH</h1>
       <p class="title">Associate Professor · University of Tourism, Macao</p>
-      <p>
-        I am an academic focusing on global health, social factors, health systems and
-        governance, decision science, data analytics, causal inference, medical tourism,
+
+      <p class="hero-summary">
+        I work on global health, social factors, health systems and governance,
+        decision science, data analytics, causal inference, medical tourism,
         travel epidemiology, and travel medicine.
       </p>
-      <p>
-        Email:
-        <a href="mailto:hughietao@utm.edu.mo">hughietao@utm.edu.mo</a>
-      </p>
+
+      <div class="meta">
+        <div><strong>Email:</strong> <a href="mailto:hughietao@utm.edu.mo">hughietao@utm.edu.mo</a></div>
+        <div><strong>Tel:</strong> +853 8598-1356</div>
+        <div><strong>Institution:</strong> University of Tourism, Macao</div>
+      </div>
 
       <div class="hero-actions">
-        <a href="mailto:hughietao@utm.edu.mo">Email</a>
-        <a href="https://scholars.utm.edu.mo/profile/hughietao" target="_blank">Official Profile</a>
-        <a href="#publications">Publications</a>
-        <a href="#contact">Contact</a>
+        <a class="button-primary" href="https://scholars.utm.edu.mo/profile/hughietao" target="_blank">Official Academic Profile</a>
+        <a class="button-secondary" href="#publications">View Publications</a>
+        <a class="button-secondary" href="mailto:hughietao@utm.edu.mo">Email Me</a>
       </div>
     </div>
 
@@ -235,37 +400,22 @@
         <img src="Hughie.jpg" alt="Profile Photo" />
         <p>Profile Photo</p>
       </div>
-
       <div class="card">
         <img src="qr.png" alt="QR Code" />
         <p>Scan for full publications and academic profile</p>
       </div>
     </div>
-  </header>
-
-  <nav class="section-nav">
-    <a href="#about">About</a>
-    <a href="#research">Research</a>
-    <a href="#certifications">Certifications</a>
-    <a href="#education">Education</a>
-    <a href="#experience">Experience</a>
-    <a href="#teaching">Teaching</a>
-    <a href="#publications">Publications</a>
-    <a href="#patents">Software</a>
-    <a href="#grants">Grants</a>
-    <a href="#awards">Awards</a>
-    <a href="#contact">Contact</a>
-  </nav>
+  </section>
 
   <main class="container">
     <section id="about" class="section">
       <h2>About</h2>
       <p>
-        I am an Associate Professor at the University of Tourism, Macao. My work focuses
-        on global health, social determinants, health systems and governance, AI-oriented
-        decision science, data analytics, causal inference, and travel-related health
-        research. This website presents my academic background, research interests,
-        teaching, and scholarly activities.
+        I am an Associate Professor at the University of Tourism, Macao. My academic work
+        focuses on global health, social determinants, health systems and governance,
+        AI-oriented decision science, data analytics, causal inference, and travel-related
+        health research. This website presents my academic background, research interests,
+        teaching, software outputs, and scholarly activities.
       </p>
     </section>
 
@@ -278,14 +428,31 @@
       </ul>
     </section>
 
-    <section id="certifications" class="section">
-      <h2>Professional Certifications</h2>
-      <ul>
-        <li>Certified Data Management Professional (CDMP-P)</li>
-        <li>Certified Business Analysis Professional (CBAP ®)</li>
-        <li>Teaching Qualification for Higher Education (Certificate No.: 20204400171004074)</li>
-        <li>Health Manager (Certificate No.: 1605001177320014)</li>
-      </ul>
+    <section id="highlights" class="section">
+      <h2>Research Highlights</h2>
+      <div class="highlights">
+        <div class="highlight-card">
+          <h3>Global Health and Governance</h3>
+          <p>
+            Studying how social factors, institutions, and governance frameworks shape
+            health outcomes and public health practice.
+          </p>
+        </div>
+        <div class="highlight-card">
+          <h3>AI-Oriented Decision Science</h3>
+          <p>
+            Applying data analytics and causal inference to support evidence-based
+            decision-making in health and tourism-related contexts.
+          </p>
+        </div>
+        <div class="highlight-card">
+          <h3>Travel Medicine and Medical Tourism</h3>
+          <p>
+            Exploring health risks, behavioral patterns, and decision support approaches
+            in travel epidemiology, travel medicine, and medical tourism.
+          </p>
+        </div>
+      </div>
     </section>
 
     <section id="education" class="section">
@@ -301,10 +468,26 @@
 
     <section id="experience" class="section">
       <h2>Professional Experience</h2>
-      <div class="timeline-item"><strong>2025–Present</strong>: Associate Professor, University of Tourism, Macao</div>
-      <div class="timeline-item"><strong>2025</strong>: Executive Director, Hong Kong Public Health Technology Research Center</div>
-      <div class="timeline-item"><strong>2025</strong>: Discipline Leader and Associate Professor, Guangzhou College of Commerce</div>
-      <div class="timeline-item"><strong>2024–2025</strong>: Postdoctoral Research Fellow, School of Medicine, Macau University of Science and Technology</div>
+
+      <div class="timeline-item">
+        <span class="timeline-year">2025–Present</span>
+        Associate Professor, University of Tourism, Macao
+      </div>
+
+      <div class="timeline-item">
+        <span class="timeline-year">2025</span>
+        Executive Director, Hong Kong Public Health Technology Research Center
+      </div>
+
+      <div class="timeline-item">
+        <span class="timeline-year">2025</span>
+        Discipline Leader and Associate Professor, Guangzhou College of Commerce
+      </div>
+
+      <div class="timeline-item">
+        <span class="timeline-year">2024–2025</span>
+        Postdoctoral Research Fellow, School of Medicine, Macau University of Science and Technology
+      </div>
     </section>
 
     <section id="teaching" class="section">
@@ -315,11 +498,8 @@
       </p>
       <p>
         Over the past three years, I undertook more than 500 teaching hours per academic
-        year for undergraduate core courses.
-      </p>
-      <p>
-        I also delivered postgraduate-level courses in Health Big Data and Medical Research
-        Methodology.
+        year for undergraduate core courses. I also delivered postgraduate-level courses
+        in Health Big Data and Medical Research Methodology.
       </p>
       <p>
         I have supervised 35 undergraduate theses, co-supervised 4 master’s theses,
@@ -333,15 +513,16 @@
         My most complete and up-to-date publication record is available on my official
         academic profile page.
       </p>
+
       <div class="profile-link-box">
-        <strong>Official academic profile:</strong><br />
+        <strong>Official academic profile</strong><br />
         <a href="https://scholars.utm.edu.mo/profile/hughietao" target="_blank">
           scholars.utm.edu.mo/profile/hughietao
         </a>
       </div>
     </section>
 
-    <section id="patents" class="section">
+    <section id="software" class="section">
       <h2>Patents / Software Copyright</h2>
       <ul>
         <li>
@@ -376,11 +557,29 @@
 
     <section id="contact" class="section">
       <h2>Contact</h2>
-      <p><strong>Email:</strong> <a href="mailto:hughietao@utm.edu.mo">hughietao@utm.edu.mo</a></p>
-      <p><strong>Tel:</strong> +853 8598-1356</p>
-      <p><strong>Phone:</strong> +853 6885-7999 (Macao) / +86 191-6885-7999 (Mainland China)</p>
-      <p><strong>Address:</strong> Avenida Padre Tomás Pereira Taipa, University of Tourism, Macao SAR, China</p>
+      <div class="contact-grid">
+        <div class="contact-item">
+          <strong>Email</strong>
+          <a href="mailto:hughietao@utm.edu.mo">hughietao@utm.edu.mo</a>
+        </div>
+        <div class="contact-item">
+          <strong>Tel</strong>
+          +853 8598-1356
+        </div>
+        <div class="contact-item">
+          <strong>Mobile</strong>
+          +853 6885-7999 (Macao) / +86 191-6885-7999 (Mainland China)
+        </div>
+        <div class="contact-item">
+          <strong>Address</strong>
+          Avenida Padre Tomás Pereira Taipa, University of Tourism, Macao SAR, China
+        </div>
+      </div>
     </section>
   </main>
+
+  <div class="footer">
+    © 2026 Hughie Tao Xiaoyu. All rights reserved.
+  </div>
 </body>
 </html>

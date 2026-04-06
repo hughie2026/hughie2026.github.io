@@ -73,7 +73,7 @@
       margin: 0 auto;
       padding: 56px 0 28px;
       display: grid;
-      grid-template-columns: minmax(0, 1fr) 290px;
+      grid-template-columns: minmax(0, 1fr) 320px;
       gap: 34px;
       align-items: start;
     }
@@ -134,12 +134,14 @@
     }
 
     .button-primary,
-    .button-secondary {
+    .button-secondary,
+    .sidebar-button {
       display: inline-block;
       padding: 12px 18px;
       border-radius: 12px;
       font-weight: 700;
       transition: 0.2s ease;
+      text-align: center;
     }
 
     .button-primary {
@@ -153,13 +155,15 @@
       text-decoration: none;
     }
 
-    .button-secondary {
+    .button-secondary,
+    .sidebar-button {
       background: white;
       color: #1f4db8;
       border: 1px solid #cdd9f5;
     }
 
-    .button-secondary:hover {
+    .button-secondary:hover,
+    .sidebar-button:hover {
       background: #f8fbff;
       text-decoration: none;
     }
@@ -170,26 +174,65 @@
       gap: 20px;
     }
 
-    .card {
+    .profile-card {
       background: white;
-      border-radius: 22px;
-      padding: 16px;
+      border-radius: 24px;
+      padding: 18px;
       box-shadow: 0 14px 34px rgba(15, 23, 42, 0.08);
       border: 1px solid #edf2f7;
-      text-align: center;
     }
 
-    .card img {
+    .profile-card img {
       width: 100%;
       height: auto;
       display: block;
-      border-radius: 16px;
+      border-radius: 18px;
+      margin-bottom: 18px;
     }
 
-    .card p {
-      margin: 12px 0 4px;
-      font-size: 14px;
+    .profile-name {
+      margin: 0 0 6px;
+      font-size: 24px;
+      line-height: 1.25;
+      color: #0f172a;
+    }
+
+    .profile-role {
+      margin: 0 0 4px;
+      font-size: 16px;
+      font-weight: 700;
+      color: #3b4a66;
+    }
+
+    .profile-org {
+      margin: 0 0 18px;
+      font-size: 15px;
       color: #64748b;
+    }
+
+    .profile-info {
+      display: grid;
+      gap: 12px;
+      margin-bottom: 18px;
+    }
+
+    .profile-info-item {
+      background: #f8fbff;
+      border: 1px solid #e7eefc;
+      border-radius: 14px;
+      padding: 12px 14px;
+    }
+
+    .profile-info-item strong {
+      display: block;
+      font-size: 13px;
+      color: #3b4a66;
+      margin-bottom: 4px;
+    }
+
+    .profile-buttons {
+      display: grid;
+      gap: 10px;
     }
 
     .container {
@@ -305,7 +348,7 @@
       }
 
       .hero-right {
-        max-width: 340px;
+        max-width: 380px;
       }
 
       .highlights {
@@ -395,10 +438,33 @@
     </div>
 
     <div class="hero-right">
-      <div class="card">
+      <aside class="profile-card">
         <img src="Hughie.jpg" alt="Profile Photo" />
-        <p>Profile Photo</p>
-      </div>
+
+        <h2 class="profile-name">Hughie Tao Xiaoyu</h2>
+        <p class="profile-role">Associate Professor</p>
+        <p class="profile-org">University of Tourism, Macao</p>
+
+        <div class="profile-info">
+          <div class="profile-info-item">
+            <strong>Email</strong>
+            <a href="mailto:hughietao@utm.edu.mo">hughietao@utm.edu.mo</a>
+          </div>
+          <div class="profile-info-item">
+            <strong>Tel</strong>
+            +853 8598-1356
+          </div>
+          <div class="profile-info-item">
+            <strong>Focus</strong>
+            Global Health, Decision Science, Travel Medicine
+          </div>
+        </div>
+
+        <div class="profile-buttons">
+          <a class="sidebar-button" href="https://scholars.utm.edu.mo/profile/hughietao" target="_blank">Official Profile</a>
+          <a class="sidebar-button" href="#contact">Contact Details</a>
+        </div>
+      </aside>
     </div>
   </section>
 
@@ -558,7 +624,7 @@
         </div>
         <div class="contact-item">
           <strong>Mobile</strong>
-          +853 6885-7999
+          +853 6885-7999 (Macao) / +86 191-6885-7999 (Mainland China)
         </div>
         <div class="contact-item">
           <strong>Address</strong>

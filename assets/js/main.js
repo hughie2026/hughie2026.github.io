@@ -1,5 +1,5 @@
-// 自动更新页脚年份
 document.addEventListener('DOMContentLoaded', () => {
+  // 自动更新页脚年份
   const y = document.getElementById('year');
   if (y) y.textContent = new Date().getFullYear();
 
